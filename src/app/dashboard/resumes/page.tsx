@@ -1,5 +1,4 @@
 "use client";
-import JobList from "@/components/JobList";
 import ResumeList from "@/components/ResumeList";
 import ResumeMatcher from "@/components/ResumeMatcher";
 import ResumeUpload from "@/components/ResumeUpload";

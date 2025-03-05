@@ -1,5 +1,4 @@
 "use client"
-
 import { usePathname, useRouter } from "next/navigation";
 
 import { useState } from "react";
@@ -22,7 +21,16 @@ const Sidebar = () => {
   };
 
   // Sidebar Item Component
-const SidebarItem = ({ icon, text, isOpen, active, onClick }: any) => {
+interface SidebarItemProps {
+  icon: React.ReactNode;
+  text: string;
+   path: string;
+  isOpen: boolean;
+  active?: boolean;
+  onClick: () => void;
+}
+
+const SidebarItem = ({ icon, text,isOpen, active, onClick }: SidebarItemProps) => {
   return (
     <li
       onClick={onClick}
@@ -87,6 +95,7 @@ const SidebarItem = ({ icon, text, isOpen, active, onClick }: any) => {
      <SidebarItem
        icon={<FaSignOutAlt />}
        text="Logout"
+       path="/login"
        isOpen={isOpen}
        onClick={handleLogout}
      />

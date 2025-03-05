@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header = () => {
     return (
       <header className="bg-violet-700 shadow-md py-4 px-6">
@@ -5,9 +7,9 @@ const Header = () => {
           <h1 className="text-2xl font-bold text-white">JobMatch</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="/" className="text-white hover:text-gray-50">Home</a></li>
-              <li><a href="#" className="text-white hover:text-gray-50">Jobs</a></li>
-              <li><a href="#" className="text-white hover:text-gray-50">Contact</a></li>
+              <li><Link href="/" className="text-white hover:text-gray-50">Home</Link></li>
+              <li><Link href="#" className="text-white hover:text-gray-50">Jobs</Link></li>
+              <li><Link href="#" className="text-white hover:text-gray-50">Contact</Link></li>
             </ul>
           </nav>
         </div>

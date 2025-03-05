@@ -13,7 +13,7 @@ interface JobModalProps {
 const JobModal = ({ job, onClose }: JobModalProps) => {
   const [step, setStep] = useState(0);
   const [selectedResume, setSelectedResume] = useState<Resume | null>(null);
-  const [matchScore, setMatchScore] = useState<number | null>(null);
+  const [matchScore] = useState<number | null>(null);
 
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 3));
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 0));
@@ -58,14 +58,14 @@ const JobModal = ({ job, onClose }: JobModalProps) => {
     
   };
 
-  // Function to calculate match score
+/*   // Function to calculate match score
   const calculateMatchScore = (extractedSkills: string[]) => {
     const requiredSkills = job.requiredSkills.map(skill => skill.toLowerCase());
     const matchedSkills = extractedSkills.filter(skill => requiredSkills.includes(skill.toLowerCase()));
     
     const score = Math.round((matchedSkills.length / requiredSkills.length) * 100);
     setMatchScore(score);
-  };
+  }; */
 
   return (
     <div className="fixed inset-0 backdrop-blur-sm bg-opacity-50 flex justify-center items-center">

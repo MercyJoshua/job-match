@@ -9,7 +9,7 @@ interface JobListProps {
   userSkills: string[];
 }
 
-const JobList: React.FC<JobListProps> = ({ onSelectJob, userSkills }) => {
+const JobList: React.FC<JobListProps> = ({ onSelectJob }) => {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 5; // Show 5 jobs per page
